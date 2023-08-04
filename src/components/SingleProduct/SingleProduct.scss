@@ -138,6 +138,9 @@
                         }
                         svg {
                             margin: 0 5px;
+                            @include md{
+                                margin: 0 10px;
+                            }
                         }
                     }
                 }

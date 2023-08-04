@@ -25,7 +25,7 @@ const Header = () => {
         window.addEventListener("scroll", handleScroll);
     }, []);
 
-    // const { cartCount, showCart, setShowCart } = useContext(Context);
+    const { cartCount, showCart, setShowCart } = useContext(Context);
 
     return (
         <>
@@ -36,26 +36,26 @@ const Header = () => {
                     <ul className="left">
                         <li onClick={() => navigate("/")}>Home</li>
                         <li onClick={() => navigate("/about")}>About</li>
-                        <li>Categories</li>
+                        <li onClick={()=> navigate("/category/1")}>Categories</li>
                     </ul>
                     <div className="center" onClick={() => navigate("/")}>
-                    BoatStore
+                        JSDEVSTORE.
                     </div>
                     <div className="right">
                         <TbSearch onClick={() => setSearchModal(true)} />
                         <AiOutlineHeart />
                         <span
                             className="cart-icon"
-                            // onClick={() => setShowCart(true)}
+                            onClick={() => setShowCart(true)}
                         >
-                            {/* <CgShoppingCart />
-                            {!!cartCount && <span>{cartCount}</span>} */}
+                            <CgShoppingCart />
+                            {!!cartCount && <span>{cartCount}</span>}
                         </span>
                     </div>
                 </div>
             </header>
-            {/* {searchModal && <Search setSearchModal={setSearchModal} />}
-            {showCart && <Cart />} */}
+            {searchModal && <Search setSearchModal={setSearchModal} />}
+            {showCart && <Cart />}
         </>
     );
 };

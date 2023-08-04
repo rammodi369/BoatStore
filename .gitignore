@@ -1,1 +1,25 @@
-/node_modules
+# Node.js / React
+node_modules/
+build/
+dist/
+
+# Strapi
+.tmp/
+exports/
+extensions/
+node_modules/
+.plugins/
+.yarn/
+
+# Environment Variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
